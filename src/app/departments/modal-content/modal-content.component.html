@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Edit Department</h2>
+<mat-dialog-content class="mat-typography">
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Department Name</mat-label>
+      <input (input)="onInput($event)" class="input-field" matInput value="">
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button (click)="UpdateDepartment()" [mat-dialog-close]="true" cdkFocusInitial mat-button>Update</button>
+</mat-dialog-actions>
